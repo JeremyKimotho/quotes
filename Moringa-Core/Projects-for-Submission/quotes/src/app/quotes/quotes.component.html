@@ -1,0 +1,16 @@
+<h1>J's Quotes</h1>
+<div class="container">
+  <div class="row">
+    <!-- <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form> -->
+  </div>
+</div>
+<div class="container">
+  <div class='row' *ngFor='let quote of quotes;let i = index'>
+    <div class="row">
+      <button (click)='upVote()'>Upvote</button>
+      <button (click)='deleteQuote()'>Delete</button>
+      <button (click)='downVote()'>Downvote</button>
+    </div>
+  </div>
+</div>
+
