@@ -3,35 +3,23 @@
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
       <!-- Quote Form -->
       <div class="form-group">
-
         <label for="sentence">Sentence</label>
-        <input type="text" required class="form-control" rows="4"  id="sentence" [(ngModel)]='newQuote.sentence' name='name' #sentence='ngModel'
-          required>
-
-        <div [hidden]='sentence.valid || sentence.pristine' class='alert alert-danger'>
-          <p>Quote is Required</p>
-        </div>
-
+<input type="text" required class="form-control" value="&quot;&quot;" autocomplete="off" id="sentence"
+  [(ngModel)]='newQuote.sentence' name='name' #sentence='ngModel'
+          >
       </div>
       <!-- Author Input -->
       <div class="form-group">
-
         <label for="author">Author</label>
-        <textarea class="form-control" id="author" [(ngModel)]='newQuote.author' name='author'
-          #author='ngModel' required></textarea>
-
-        <div [hidden]='author.valid || author.pristine' class='alert alert-danger'>
-          <p>Author is Required</p>
-        </div>
-
+        <textarea class="form-control" id="author" autocomplete="off"  [(ngModel)]='newQuote.author' name='author'
+          #author='ngModel' ></textarea>
       </div>
       <!-- Submitter Input -->
       <div class="form-group">
-
         <label for="submitter">Submitter</label>
-        <textarea class="form-control" id="submitter" [(ngModel)]='newGoal.submitter' name='submitter' #submitter='ngModel'>
+        <textarea class="form-control" id="submitter" autocomplete="off"  [(ngModel)]='newQuote.submitter' name='submitter'
+        #submitter='ngModel'>
         </textarea>
-
       </div>
       <button type='Submit' class='btn btn-success btn-lg'>Add Quote</button>
     </form>
