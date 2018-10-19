@@ -9,9 +9,9 @@ import { Quote } from '.././quote'
 export class QuotesComponent implements OnInit {
 
   quotes = [
-    new Quote('Playing football is simple, but playing simple football is the hardest thing', 'Jeremy Kimotho', today),
-    new Quote('The more difficult the victory, the greater the happiness in winning.', 'Edson "Pele" Arantes', today),
-    new Quote('When people succeed, it is because of hard work. Luck has nothing to do with success', 'Diego Maradona', today)
+    new Quote('Playing football is simple, but playing simple football is the hardest thing', 'Jeremy Kimotho', 'Jeremy Kimotho', today),
+    new Quote('The more difficult the victory, the greater the happiness in winning.', 'Edson "Pele" Arantes', 'Jeremy Kimotho', today),
+    new Quote('When people succeed, it is because of hard work. Luck has nothing to do with success', 'Diego Maradona', 'Jeremy Kimotho', today)
     
   ]
 
