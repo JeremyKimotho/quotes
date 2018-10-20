@@ -1,18 +1,19 @@
 <h1>J's Quotes</h1>
 <div class="container">
-  <div class="row">
-    <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
-  </div>
-</div>
-<div class="container">
-  <div class='row' *ngFor='let quote of quotes;let i = index'>
+  <div class="card">
     <div class="row">
-      <h1></h1>
-      <h2 id='{{i}}'>'{{quote.sentence}}'</h2>
-      <button class='btn btn-primary' (click)='toogleDetails(i)'>Quote Details</button>
+      <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
     </div>
-    <div class='row' *ngIf="quote.showDetails">
-      <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+    </div>
+    <div class="container">
+      <div class='row' *ngFor='let quote of quotes;let i = index'>
+        <div class="row">
+          <h3 id='{{i}}'>'{{quote.sentence}}'</h3>
+          <button class='btn btn-primary' (click)='toogleDetails(i)'>Quote Details</button>
+        </div>
+      <div class='row' *ngIf="quote.showDetails">
+        <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+      </div>
     </div>
   </div>
 </div>

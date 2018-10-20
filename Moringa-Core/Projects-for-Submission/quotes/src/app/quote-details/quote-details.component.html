@@ -1,8 +1,8 @@
-<p>Submitted by {{quote.submitter}} on {{quote.submissionDate}}</p>
-<button (click)='upVote()'>Upvote</button>
+<p>Submitted by {{quote.submitter}}, {{quote.submissionDate|daysCount}} days ago</p>
+<h5 id='upvotes'></h5><button (click)='upVote()'>Upvote</button>
 <button (click)='downVote()'>Downvote</button>
+<h5 id='downvotes'>
 <button class='btn btn-danger' (click)='quoteDelete(true)'> Delete Quote </button>
 
-<!-- <p>Submitted at {{quote.submissionDate|dateCount}}</p> -->
-<!-- <button (click)='upVote()'>Upvote</button>{{newQuote.upvotes}}
-<button (click)='downVote()'>Downvote</button>{{newQuote.downvotes}} -->
+<!-- <p>Submitted by {{quote.submitter}} on {{quote.submissionDate|dateCount}}</p> -->
+
