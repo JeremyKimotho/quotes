@@ -1,0 +1,26 @@
+h1{
+  text-align: right;
+  font-size:40px;
+  text-decoration: underline;
+}
+.card{
+  width: 65%;
+  margin-left:auto;
+  margin-right:auto;
+  border: 2.5px solid #273746;
+  background-color:#EAEDED;
+}
+hr{
+  border: none;
+  height: 2px;
+  /* Set the hr color */
+  background-color: #BDC3C7;
+  /* Modern Browsers */
+}
+.quote{
+  padding-left:35px;
+  padding-right:35px;
+}
+#quoteArea{
+  border:1.5px solid #273746;
+}

@@ -1,0 +1,18 @@
+.form-group{
+  padding-left:95px;
+}
+#button{
+  margin-left:275px;
+}
+.row{
+  padding-top:12%;
+  padding-bottom:12%;
+}
+button {
+  padding-left: auto;
+  padding-right: auto;
+}
+textarea {
+  width: 500px;
+  height: 150px;
+}
