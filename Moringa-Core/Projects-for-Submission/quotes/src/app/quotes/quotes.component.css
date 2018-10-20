@@ -18,9 +18,32 @@ hr{
   /* Modern Browsers */
 }
 .quote{
-  padding-left:35px;
+  padding-left:40px;
   padding-right:35px;
 }
 #quoteArea{
   border:1.5px solid #273746;
+  margin-left:30px;
+  margin-right:30px;
+  width:1000px;
+  background-color:#EAEDED;
+  margin-bottom:25px;
+  text-align:center;
+}
+.row{
+  text-align:center;
+}
+#detailsButton{
+  margin-top:40px;
+  margin-left:0px;
+  float:left;
+}
+pre{
+  font-family:Arial, Helvetica, sans-serif;
+  padding:1px;
+  color:red;
+  
+}
+.author{
+  text-align:left;
 }

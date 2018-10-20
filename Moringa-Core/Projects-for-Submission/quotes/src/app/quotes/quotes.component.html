@@ -10,13 +10,15 @@
 <div class="container">
   <div class='row' *ngFor='let quote of quotes;let i = index'>
     <div class="row" id=quoteArea>
-      <h3 id='{{i}}'class='quote'>'{{quote.sentence}}'</h3>
-      <h4 id='{{i}}'>-{{quote.author}}</h4>
-      <button class='btn btn-primary' (click)='toogleDetails(i)'>Quote Details</button>
+      <h3 id='{{i}}' class='quote'>'{{quote.sentence}}'</h3>
+      <h4 id='{{i}}' class='author'>-{{quote.author}}</h4>
+      <pre>
+        <button class='btn btn-primary' id='detailsButton'(click)='toogleDetails(i)'>Quote Details</button>
+        <div class='quoteDetails' *ngIf="quote.showDetails">
+          <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+        </div>
+      </pre>
     </div>
-  <div class='row' *ngIf="quote.showDetails">
-    <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
   </div>
-</div>
 </div>
 

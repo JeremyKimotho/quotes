@@ -17,15 +17,14 @@ export class QuoteDetailsComponent implements OnInit {
 
   upVote(){
     this.quote.upvotes.push(1)
+    console.log(this.quote.upvotes.reduce(this.summer))
     return this.quote.upvotes.reduce(this.summer)
-    var upvoter:any = this.quote.upvotes.reduce(this.summer)
-    document.getElementById("upvotes").innerHTML = upvoter;
   }
 
   downVote() {
     this.quote.downvotes.push(1)
+    console.log(this.quote.downvotes.reduce(this.summer))
     return this.quote.downvotes.reduce(this.summer)
-    
   }
 
   quoteDelete(complete: boolean) {
