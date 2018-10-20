@@ -9,12 +9,12 @@ import { Quote } from '.././quote'
 })
 export class QuoteFormComponent implements OnInit {
 
-  newQuote = new Quote('', '', '', new Date());
+  newQuote = new Quote('', '', '', d, [], []);
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote() {
     this.addQuote.emit(this.newQuote);
-    this.newQuote = new Quote('', '', '', new Date());
+    this.newQuote = new Quote('', '', '', d, [], []);
 
   }
 
@@ -24,3 +24,5 @@ export class QuoteFormComponent implements OnInit {
   }
 
 }
+var today = new Date();
+var d = today.toDateString(); 

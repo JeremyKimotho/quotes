@@ -10,9 +10,9 @@ import { ADDRGETNETWORKPARAMS } from 'dns';
 export class QuotesComponent implements OnInit {
 
   quotes = [
-    new Quote('Playing football is simple, but playing simple football is the hardest thing', 'Jeremy Kimotho', 'Jeremy Kimotho', today, 0, 0),
-    new Quote('The more difficult the victory, the greater the happiness in winning', 'Edson "Pele" Arantes', 'Jeremy Kimotho', today, 0, 0),
-    new Quote('When people succeed, it is because of hard work. Luck has nothing to do with success', 'Diego Maradona', 'Jeremy Kimotho', today, 0, 0)
+    new Quote('Playing football is simple, but playing simple football is the hardest thing', 'Jeremy Kimotho', 'Jeremy Kimotho', d, [0], [0]),
+    new Quote('The more difficult the victory, the greater the happiness in winning', 'Edson "Pele" Arantes', 'Jeremy Kimotho', d, [0], [0]),
+    new Quote('When people succeed, it is because of hard work. Luck has nothing to do with success', 'Diego Maradona', 'Jeremy Kimotho', d, [0], [0])
     
   ]
 
@@ -22,12 +22,22 @@ export class QuotesComponent implements OnInit {
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
+    quote.submissionDate = d;
     this.quotes.unshift(quote);
   }
 
-    
-  deleteQuote(index) {
-    this.quotes.splice(index, 1);
+
+  deleteQuote(isComplete, index) {
+  if (isComplete) {
+    let toDelete=true
+    if (toDelete) {
+      this.quotes.splice(index, 1);
+    }
+  }
+}
+  
+  toogleDetails(index) {
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
 
 
@@ -36,4 +46,4 @@ export class QuotesComponent implements OnInit {
 
 }
 var today = new Date();
-
+var d = today.toDateString(); 

@@ -7,15 +7,13 @@
 <div class="container">
   <div class='row' *ngFor='let quote of quotes;let i = index'>
     <div class="row">
-    <h1></h1>
-    <h2 id='{{i}}'>'{{quote.sentence}}'</h2>
-      <button (click)='upVote()'>Upvote</button>{{newQuote.upvotes}}
-      <button (click)='deleteQuote()'>Delete</button>
-      <button (click)='downVote()'>Downvote</button>{{newQuote.downvotes}}
+      <h1></h1>
+      <h2 id='{{i}}'>'{{quote.sentence}}'</h2>
+      <button class='btn btn-primary' (click)='toogleDetails(i)'>Quote Details</button>
     </div>
-    <!-- <div class='row' *ngIf="goal.showDetails">
-      <app-quote-details [quote]='quote'></app-quote-details>
-    </div> -->
+    <div class='row' *ngIf="quote.showDetails">
+      <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+    </div>
   </div>
 </div>
 
