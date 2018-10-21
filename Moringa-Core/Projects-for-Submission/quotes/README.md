@@ -9,3 +9,5 @@ There are no known bugs
 This app was built using the angular framework. The specific parts include components,pipes, and directives.
 ## Support and contact details
 Feel free to contact me on jeremykimotho@yahoo.com
+## Live Link 
+https://jeremykimotho.github.io/quotes/
