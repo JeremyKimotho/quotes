@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '.././quote'
-import { ADDRGETNETWORKPARAMS } from 'dns';
+
 
 @Component({
   selector: 'app-quotes',
