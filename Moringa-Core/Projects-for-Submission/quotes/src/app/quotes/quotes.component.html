@@ -10,8 +10,10 @@
 <div class="container">
   <div class='row' *ngFor='let quote of quotes;let i = index'>
     <div class="row" id=quoteArea>
-      <h3 id='{{i}}' class='quote'>'{{quote.sentence}}'</h3>
-      <h4 id='{{i}}' class='author'>-{{quote.author}}</h4>
+      <h3 id='{{i}}' class='quote'>'{{quote.sentence}}'</h3><br>
+      <pre>
+        <h4 id='{{i}}' class='author'>-{{quote.author}}</h4>
+      </pre>
       <pre>
         <button class='btn btn-primary' id='detailsButton'(click)='toogleDetails(i)'>Quote Details</button>
         <div class='quoteDetails' *ngIf="quote.showDetails">

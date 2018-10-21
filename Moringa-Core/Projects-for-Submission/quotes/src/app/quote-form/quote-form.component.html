@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' name='myForm' #quoteForm='ngForm'>
       <!-- Quote Form -->
       <div class="form-group">
         <label for="sentence">Quote</label>
-        <textarea type="text" rows='4' placeholder='The Quote will automatically appear in quotes' required class="form-control" autocomplete="off" id="sentence"
+        <textarea type="text" rows='4' placeholder='The Quote will automatically appear in quotes' ng-model='sentence' class="form-control" autocomplete="off" id="sentence"
         [(ngModel)]='newQuote.sentence' name='name' #sentence='ngModel'></textarea>
       </div>
       <!-- Author Input -->
@@ -19,7 +19,8 @@
         <input class="form-control" id="submitter" placeholder='Your name' rows='1' autocomplete="off"
         [(ngModel)]='newQuote.submitter' name='submitter' #submitter='ngModel'>
       </div>
-      <button type='Submit' id='button' class='btn btn-success btn-lg'>Add Quote</button>
+      <button type='Submit' ng-model='checker' id='button' class='btn btn-success btn-lg'>Add Quote</button>
     </form>
   </div>
 </div>
+
